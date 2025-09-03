@@ -1,18 +1,26 @@
 const express = require("express");
-const sqlite3 = require("sqlite3").verbose();
+const { open } = require("sqlite");
 const cors = require("cors");
-
+const sqlite3 = require("sqlite3");
+const path = require("path");
 const app = express();
+const port = process.env.PORT || 4000;
 app.use(cors());
-app.use(express.json()); // To parse JSON request bodies
+const dbPath = path.join(__dirname, "database.db");
+app.use(express.json());
+let db;
 
-// Connect to SQLite database
-const db = new sqlite3.Database("./database.db", (err) => {
-  if (err) {
-    console.error(err.message);
+const initializeDbAndServer = async () => {
+  try {
+    db = await open({ filename: dbPath, driver: sqlite3.Database });
+    app.listen(port, () => console.log("Server Has Been Started"));
+  } catch (error) {
+    console.log(`Database error ${error}`);
+    process.exit(1);
   }
-  console.log("Connected to the SQLite database.");
-});
+};
+
+initializeDbAndServer();
 
 // Create new customer
 app.post("/api/customers", (req, res) => {
@@ -175,8 +183,4 @@ app.delete("/api/addresses/:addressId", (req, res) => {
   });
 });
 
-/* ---------------- SERVER ---------------- */
-const PORT = 5000;
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
+
