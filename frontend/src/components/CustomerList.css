@@ -1,0 +1,26 @@
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.customer-table th,
+.customer-table td {
+  border-bottom: 1px solid #eef2f6;
+  padding: 10px;
+  text-align: left;
+}
+.customer-table th {
+  background: #fbfcfe;
+  font-weight: 600;
+  color: #374151;
+}
+.link {
+  margin-right: 8px;
+  text-decoration: none;
+  color: var(--accent);
+  margin-left: 8px;
+}
+.btn.tiny {
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}

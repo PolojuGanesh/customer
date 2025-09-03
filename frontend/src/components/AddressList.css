@@ -1,0 +1,19 @@
+.address-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: grid;
+  gap: 8px;
+}
+.address-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fbfcff;
+  border: 1px solid #eef2f6;
+}
+.address-details {
+  font-weight: 600;
+}

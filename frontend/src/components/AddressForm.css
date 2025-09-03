@@ -1,0 +1,27 @@
+.address-form {
+  display: grid;
+  gap: 10px;
+  max-width: 600px;
+}
+.address-form input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e6e9ee;
+  margin-top: 6px;
+}
+.err {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}

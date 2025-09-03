@@ -1,0 +1,9 @@
+.customer-detail-card .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.customer-detail-card h2 {
+  margin: 0;
+}

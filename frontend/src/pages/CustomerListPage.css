@@ -1,0 +1,20 @@
+.customer-list-page .controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.customer-list-page input,
+.customer-list-page select {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.customer-list-page .pagination {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+  align-items: center;
+}
