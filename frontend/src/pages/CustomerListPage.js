@@ -33,7 +33,7 @@ export default function CustomerListPage() {
       if (!res.ok) throw new Error(`Server error ${res.status}`);
       const data = await res.json();
 
-      // ✅ Expect backend shape { data, page, limit, total, totalPages }
+      // Expect backend shape { data, page, limit, total, totalPages }
       if (data && data.data) {
         setCustomers(data.data);
         setTotal(data.total || data.data.length);
